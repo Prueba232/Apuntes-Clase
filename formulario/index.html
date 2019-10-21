@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head> <meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<form action="ponombre(input.name)"  method="post">
+		Nombre: 
+		<br>
+		<input type="text" name="Nombre"> 
+		<br>
+		<br>
+		Apellido:
+		<br>
+		<input type="text" name="Apellido"> 
+		<br>
+		<br>
+		<input type="button" value="Enviar" onclick="ponombre(Nombre.value)">
+		<br>
+	</form>
+	    <br>
+	<div id="Mielemento">Hola Omar soy tu Página web</div>
+	<script type="text/javascript">
+		function ponombre (Nombre) {
+			document.getElementById("Mielemento").innerHTML =  
+		" Hola " + Nombre + " soy tu Página web"
+		}
+	</script>
+</body>
+</html>
