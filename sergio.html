@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="es">
+	<title>Contact Form</title>
+</head>
+<body>
+    <form method="post">
+    	Nombre<br>
+    	<input type="text" name="nombre">
+    	<br>
+    	<br>
+    	Correo Electrónico<br>
+    	<input type="text" name="Correo Electrónico">
+    	<br>
+    	<br>
+    	<input type="button" value="Enviar Formulario" onclick="modificacion(nombre.value)" >
+    	</form>
+    	<div id="Buenas">
+    		<br>
+    		Buenas Sergio Hace un calor que te torras
+    	</div>
+    	<script type="text/javascript">
+    		function modificacion(nombre) {
+    			document.getElementById("Buenas").innerHTML= "Buenas " + nombre + ", Hace un calor que te torras"    		}
+
+
+    	</script>
+    	
+
+
+
+    
+
+</body>
+</html>
