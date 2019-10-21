@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de prueba</title>
+</head>
+<body>
+		<!-- action="http://corral.es/eoi/procesa_formulario.php" method="post" -->
+	<form method="post" >
+		Nombre<br>
+		<input type="text" name="nombre">
+		<br>
+		<br>
+		Apellido<br>
+		<input type="text" name="Apellido">
+		<br>
+		<br>
+		<input type="button" value="Enviar Formulario" onclick="modificacion(nombre.value)" >
+	</form>
+	<!-- div a editar segun el nombre -->
+	<div id="Saludo">
+		<br>
+		Hola Héctor soy tu página web.
+	</div>
+
+
+<script type="text/javascript">
+
+	function modificacion(nombre){
+		document.getElementByID("Saludo").innerhtml = "Hola " + nombre + " Soy tu página web";
+
+	}
+
+
+</script>
+</body>
+</html>
