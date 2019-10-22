@@ -1,0 +1,29 @@
+
+
+.yellow{
+	background-color: black;
+	margin-bottom: 0;
+	color: yellow;
+}
+.box-1{
+	background-color: #747874;
+	float: left;
+	width: 20%;
+	height: 330px;
+}
+.enlaces{
+	list-style: none;
+	padding-left: 10px;
+	color: #27AE60 ;
+}
+.section{
+	background-color: #CFD5CF;
+	height: 330px;
+
+}
+.pink{
+	margin-top: 0;
+	color: #FD04C2;
+	
+}
+
