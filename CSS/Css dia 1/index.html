@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.div {
+			background-color: red;
+			width: 50%;
+			height: 100px;
+			margin: auto;
+			color: white;
+			text-align: center;
+			text-shadow: 1px 1px 1px black;
+			border: solid 1px;
+			padding: 15px;	
+		}
+
+		.p { /*el . es que es un class y despues del punto es el nombre que va dentro del class en el html*/
+			padding-top: 10px;
+			/*text-decoration: underline;*/ /*poner subrayado*/
+			text-transform: uppercase; /*convertir en mayusculas*/
+			letter-spacing: 10px;      /*espacio entre letras*/
+			word-spacing: 20px;			/*espacio entre palabras*/
+			font-family: Verdana;			/*cambio de el tipo de letra*/
+			font-size: 24px;
+			font-style: italic;
+			font-weight: bold;			/*Gordura letra*/
+									/*forma abreviada font: oblique bold 22px arial  (comprobado que funciona)*/
+		}
+
+		a:link {	/*si tuviesemos mas de un link deberiamos identidicar al link que no queremos que sea igual (id) y en Css #nombre id*/
+			text-decoration: none;
+			  /*quitar subrayador del enlace*/
+		}
+
+		
+		a:hover{ /*es para cunado el raton pasa por encima*/
+			color: yellow;
+		}
+
+		a:active{ /*cuando lo estas pulsando*/
+			color: cyan;
+
+		}
+
+	</style>
+</head>
+<body>					
+	<div class="div"> 															<!--se abra en nueva pestaña el enlace (target="blank")-->
+		<p class="p"> <a href="https://www.vistoenlasredes.com/"  target="blank"> Un enlace al humor</a> </p>
+	</div>
+</body>
+</html>

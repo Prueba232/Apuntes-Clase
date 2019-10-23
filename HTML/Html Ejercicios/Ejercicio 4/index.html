@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div style="border: solid 1px; padding: 10px; width: 30%; border-color: yellow; border-radius: 5px">
+		<form method="post">
+		    <p>Title</p>
+		     <input type="radio" name="Mr"> Mr 
+		     <input type="radio" name="Mr"> Mrs
+		     <input type="radio" name="Mr"> Miss
+		    <!-- En los radio los que tienen el mismo name ="Mr" en este caso si eliges uno los demas no puedes -->
+		    <p>First name</p>
+		    <input type="text" name="First name">
+		    <br>
+		    <p>Last name</p>
+		    <input type="text" name="Last name">
+		    <br> 
+		    <p>Email</p>
+		    <!-- Mirar bien y acordarse de los pattern-->
+		    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" " title="contenga @" required placeholder="ejemplo@gmail.com">
+		    <br>
+		    <p>Phone number</p>
+		    <input type="tel" name="telphone" pattern="[0-9]{9}" title="ten numbers code" required>
+		    <br>
+		    <p>Password</p>
+		    <input type="password" name="Password" [a-zA-Z0-9.]{15} required="">
+
+		    <br>
+		    <p>Country</p>
+		    <select>
+			    <option> China</option>
+		    </select>
+		    <br>
+		    <input type="checkbox" name="conditions"> i agree to the <span><a href=""> terms and conditions</a></span>
+		    <br>
+		    <input type="submit" value="Sing up" name="Sing up">
+		    <input type="reset" value="reset form" name="reset">
+		</form>
+
+
+	</div>
+
+</body>
+</html>
