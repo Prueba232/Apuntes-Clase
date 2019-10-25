@@ -1,90 +1,164 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"/>
-	<title>Web de prueba de Hector</title>
-<script type="text/javascript">
-
-	//alert("hola mundo");
-
-	var x = prompt("pon 2: ");
-
-	if(x == 2){
-		alert("bien hecho");
-	}
-	else{
-		alert("Eso no es un 2");
-
-	}
-
-	function dame(){
-		alert("^^");
-	}
-
-
-
-</script>
-<!-- Comienzo de css -->
+	<title>ConcursoPicasso</title>
 <style type="text/css">
+	.encabezado{
+		font-family: comic sans;
+		font-size: 25px;
+		text-align: center;
+		text-shadow: 1px 1px red;
+		margin: auto;
+		border-radius: 20px 20px;
+		width: 90%;
+		font-weight: 900;
+		background-image: linear-gradient(to right, black, gray, black);
+	}
+}
+	img{
+			border-radius: 10px;
+			width: 600px;
+			height: 600px;
+			margin-right: 20px;
+			margin-left: 20px;
+
+	}
+	.divImagen1{
+		margin: auto;
+		width: 50%;
+		border: 1px solid
+		padding-top: 10px;
+	}
+
+	div{
+		padding-top: 10px;
+	}
+
+	body{
+		background: url(img/fondo.jpg) no-repeat;
+		position: absolute;
+		width: 100%;
+	}
+
+	@keyframes fondo{
+		0% {opacity: 1}
+		25% {opacity: 0.5}
+		50% {opacity: 0.25}
+		75% {opacity: 0.15}
+	}
+
+	.coco{
+		/*border: 1px solid;*/
+		margin-right: 750px;
+		margin-top: 250px;
+		margin-left: 400px;
+		animation-name: giroCoco;
+		animation-duration: 6s;
+		animation-iteration-count: infinite;
+	}
+
+	img{
+		width: 220%
+	}
 	
 
 
+	@keyframes giroNave {
+
+		0% {transform: rotateZ(6grad);}
+		25% {transform: rotateZ(8grad);}
+		50% {transform: rotate(10grad);}
+	}
+	
+
+	@keyframes giroCoco {
+
+		0% {transform: rotateY(90grad);}
+		25% {transform: rotateY(180grad);}
+
+	}
+
+	.asideimgNave{
+		/*border: 1px solid;*/
+		width: 25%;
+		height: 225px;
+		margin-left: 380px;
+		animation-name: giroNave;
+		animation-duration: 8s;
+		animation-iteration-count: infinite; 
+	}
+
+	.sat{
+		width: 700%;
+	}
+
+	.asideSat{
+		/*border: 2px solid blue;*/
+		width: 10%;
+		height: 10px;
+		float: right;
+		margin: auto;
+		margin-right: 300px;
+		margin-bottom: 100%;
+		animation-name: sat;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes sat{
+		0% {transform: rotate(1grad);}
+		25% {transform: rotate(2grad);}
+		50% {transform: rotate(2grad);}
+	}
+
+	.rayos{
+		margin-left: 25px;
+		margin-bottom: 100px;
+		animation-name: rayoAnimacion;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+	}
+
+
+	@keyframes rayoAnimacion{
+		0% {opacity: 0.5;}
+		25% {opacity: 0.25;}
+		50% {opacity: 0.5;}
+		75% {opacity: 0.75;}
+
+	}
+
+	.planeta1{
+		width: 12%;
+		/*border: 1px solid;*/
+		margin-right: 400px;
+		margin-top: 90px;
+		float: right;
+		animation-name: planetaAnimacion;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes planetaAnimacion{
+		0% {width: 12%}
+		25% {width: 12.5%}
+		50% {wid}
+	}
 
 </style>
-</head>
-<body bgcolor="gray">
-
-	<div align="center">
-		<h1>texto en grande</h1>
-		<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<marquee direction = "up" scrollamount=15><img src="img/html5.png" alt="html5" title="imagen de html5" align="center" width="15%" ></marquee></p>
-		<!-- Enlace a web de bricolaje -->
-		<p><a href="http://www.bricocrack.tv/" target="black"><img src="img/brico.png" align="ceter" title="enlace a web"></a></p>
-
-		<input type="button"  name="tocame" onclick="dame()" value="*********Dame**********">	
-		<table width = "600" border="5px" bgcolor="cyan" cellspacing="2" cellpadding="2">
-			
-				<ol align = left>
-			<tr>
-					<th scope="col"><li>Parrafo de texto y encabezado de la tabla</li></th>
-			</tr>
-			<tr>
-					<td><li>texto acentuado <span style="background-color: white">á</span></li></td>
-			</tr>
-			<tr>
-					<td><li><strong>texto en negrita</strong></li></td>
-			</tr>
-			<tr>
-					<td><li><i>texto en italica</i></li></td>
-			</tr>
-			<tr>
-					<td><li><em>énfasis</em></li></td>
-			</tr>
-			<tr>
-					<td><li><mark>marcado</mark></li></td>
-			</tr>
-			<tr>
-					<td><li><small>texto pequeño</small></li></td>
-			</tr>
-			<tr>
-					<td><li><del>tachado</del></li></td>
-			</tr>
-			<tr>
-					<td><li><ins>insertado</ins></li></td>
-			</tr>
-			<tr>
-					<!-- sin la <p> -->
-					<td><li><sub>subindice</sub></li></td>
-			</tr>
-			<tr>
-					<td><li><sup>superindice</sup></li></td>
-			</tr>
-			<tr>				
-				</ol>
-			</tr>
-		</table>
-		
-	</div>
-
-
+<body>
+	<aside class="planeta1">
+		<img src="img/Planeta1.png">
+	</aside>
+	<aside class="asideimgNave">
+		<img src="img/nave.png">
+		<img src="img/rayos.png" class="rayos">
+	</aside>
+	<aside class="asideSat">
+		<img src="img/sat.png" class="sat">
+	</aside>
+	<article class="coco">
+		<img src="img/cocodrilo.png">
+	</article>
 </body>
 </html>
