@@ -16,7 +16,7 @@
 	}
 
 	body{
-		background-image: linear-gradient(to left, blue, gray);
+		background-image: linear-gradient(to left, black, gray);
 	}
 
 	input{
@@ -27,21 +27,17 @@
 		color: pink;
 		font-size: 40px;
 	}
-
-
-
 </style>
-
 <script type="text/javascript" src="script.js"></script>
 <body>
-	<p><h5 id="aqui">Quieres saber la letra de tu dni ??</h5></p>
+	<p><h5 id="aqui">Introduce los dígitos de tu dni</h5></p>
 	<form>
 		Numeros del dni:
 		<br>
-		<input type="text" name="dni" id="dni" maxlength="8">
+		<input type="text" name="dni" id="dni" maxlength="8" placeholder="EJ: 12345678">
 		<br>
 		<!--no submit -->
-		<input type="button" name="enviar" onclick="verLetra(dni.value)" value="dame">
+		<input type="button" name="enviar" onclick="verLetra(dni.value)" value="Ver letra">
 	</form>
 </body>
 </html>
