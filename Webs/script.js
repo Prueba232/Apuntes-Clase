@@ -10,7 +10,7 @@ function verLetra(dni){
 		//alert("La letra de tu dni es la " + letra)
 		//console.log("La letra es " + letra);
 		if(isNaN(dni)){
-			alert("El dni no es Numérico")
+			alert("El dni no es Numérico");
 		}
 
 		else{
