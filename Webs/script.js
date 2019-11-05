@@ -4,9 +4,17 @@ function verLetra(dni){
 		var letras = "TRWAGMYFPDXBNJZSQVHLCKE";
 		var resultado;
 		resultado = dni % 23;
+<<<<<<< HEAD
 		var letra = letras.substring(resultado,resultado+1); //+1 para que pille todas las letras                 
 		if(isNaN(dni) || dni == false){
 			alert("El dni no es Numérico")
+=======
+		var letra = letras.substring(resultado,resultado+1); //+1 para que pille todas
+		//alert("La letra de tu dni es la " + letra)
+		//console.log("La letra es " + letra);
+		if(isNaN(dni)){
+			alert("El dni no es Numérico");
+>>>>>>> 350370242dc2d6d50f31b2dfa4759032f61f60cd
 		}
 
 		else{
