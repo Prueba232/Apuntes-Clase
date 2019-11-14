@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PruebaClaseDeJS2</title>
+	<script type="text/javascript">
+		//Introducimos el numero a  analizar
+		//var numero = prompt("Introduce un numero y te dire si es par o impar");
+		var numero = getElementById("numero").innerHTML;
+		//Funcion para analizar el numero y decir si es par o impar, siempre y cuando sea numerico y entero
+		function parimpar(numero){
+			//Analizamos si es un numero
+			if(isNaN(numero)){
+				alert("Error, " + numero + " no es un numero")
+			}
+			//Es entero?
+			else if(numero % 1 != 0){
+				alert("El numero " + numero + " " + "no es entero")
+			}
+			
+			else{
+				//Es par?
+				if(numero % 2 == 0){
+					//document.write("El numero " + numero + " " + "es par");
+					document.getElementById("salida").innerHTML = "El numero " + numero + " " + "es par";
+				} 
+				//Si no es par entonces es impar
+				else{
+					document.getElementById("salida").innerHTML = "El numero " + numero + " " + "es impar";
+				}
+			}
+			
+
+		}
+		
+		parimpar(numero);
+	</script>
+
+	<style type="text/css">
+		body{
+			background-image: linear-gradient(to left, lightblue, gray);
+			color: orange;
+			font-family: Arial;
+			font-size: 20px;
+			margin: 20px;
+		}
+
+		form{
+			margin-left: 60px;
+		}
+
+		.boton{
+			width: 2%;
+			height: 20px;
+			margin-left: 70px;
+			margin-top: 20px;
+			background-image: linear-gradient(to right, orange, cyan);
+			border-width: 1px;
+		}
+
+		.boton:hover{
+			opacity: 60%;
+		}
+
+		div{
+			margin-left: 400px;
+			border: 2px solid white;
+			padding-left: 60px;
+			width: 35%;
+			background-color: rgba(102, 138, 128, 35%);
+		}
+
+
+	</style>
+</head>
+<body>
+	<div>
+		<h1 id="salida">Introduce el numero</h1>
+		<form action="">
+			<input type="text" name="numero" id="numero">
+			<br> 
+			<button type="button" name="enviar" class="boton" value="X" onclick="parimpar(numero.value);">
+		</form>
+	</div>
+
+</body>
+</html>
