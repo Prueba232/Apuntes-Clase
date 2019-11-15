@@ -29,19 +29,17 @@
 		font-size: 40px;
 	}
 </style>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="Scripts/dniMat.js"></script>
 <body>
 	<p><h5 id="aqui">Introduce los dígitos de tu dni</h5></p>
 	<form>
 		Numeros del dni:
 		<br>
-		<input type="text" name="dni" id="dni" maxlength="8" placeholder="EJ: 12345678">
+		<input type="text" name="dni" id="dni" maxlength="8" placeholder="EJ: 12345678" onkeypress = "letrasno(evento);">
 		<br>
 		<!--no submit -->
 
-		<input type="button" name="enviar" onclick="verLetra(dni.value)" value="Ver letra">
-
-		<input type="button" name="enviar" onclick="verLetra(dni.value)" value="Si">
+		<input type="button" name="enviar" onclick="letra(dni.value)" value="Ver letra">
 
 	</form>
 </body>
