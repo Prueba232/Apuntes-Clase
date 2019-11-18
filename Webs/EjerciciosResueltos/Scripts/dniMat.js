@@ -34,12 +34,30 @@ function verLetra(dni){
 
 	}
 
+	function letrasno(dni){
 
-	function letrasno(evento){
+		var numeros_validos = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+		if(dni.which != 0 && dni.which != 13){
+			var dentro = String.fromCharCode(dni.which);
+			if(numeros_validos.includes(dentro)){ 
+				return true;
+			}
+			else{
+				alert("No valido");
+				return false;
+			}
+		}
+
+
+
+
+
+		/*
 		var msg = ''; 
 		var elCaracter = String.fromCharCode(evento.which);
 
-		if (evento.which!=0 && evento.which!=13) {
+		if (evento.which!=0 && evento.which!=13) { //distinto de intro (13)
 
 			msg = 'Tecla pulsada: ' + elCaracter;
 
@@ -50,6 +68,8 @@ function verLetra(dni){
 			control.innerHTML += msg + '-----------------------------<br/>';}
 
 			eventoControlado=true;
+		*/
+
 
 		}
 
