@@ -13,3 +13,9 @@
 
 		}
 	}
+
+	document.addEventListener("keydown", function(evento){
+		if(evento.keyCode >= 65 && evento.keyCode <= 122){
+			alert("No esta permitido");
+		}
+	});
