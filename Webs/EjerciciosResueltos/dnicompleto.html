@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dnicompleto</title>
+	<style type="text/css">
+	form{
+		margin-left: 30px;
+		margin-top: 30px;
+		border: 1px solid black;
+		width: 13%;
+		padding: 10px;
+		background-color: gray;
+		color: cyan;
+	}
+	
+
+	body{
+		background-image: linear-gradient(to left, black, gray);
+	}
+
+	input{
+		margin-top: 2px;
+	}
+
+	h5{
+		color: pink;
+		font-size: 40px;
+	}
+</style>
+<script type="text/javascript" src="script/comprobardni.js"></script>
+</head>
+<body>
+	<p><h5 id="aqui">Introduce tu dni</h5></p>
+	<form>
+		Numeros del dni:
+		<br>
+		<input type="text" name="dni" id="dni" maxlength="9" placeholder="EJ: 12345678Z">
+		<br>
+		<input type="button" name="enviar" onclick="letra(dni.value)" value="Ver letra"/>
+	</form>
+</body>
+</html>
