@@ -1,24 +1,16 @@
-
 function comprime(num){
-
-	var suma = 0;
-	for(i = 0; i < num.length; i++){
-		suma = suma + parseInt(num[i]);	
-
-
-		/*
-			for(i = 0; suma.length != 1; i++){
-			var suma_rep = 0
-			suma_rep = suma + parseInt(suma[i]);
+	suma = num;
+	while(suma > 9){
+		var L = String(num).length; //String para poder tener el length
+		suma = 0;
+		for(i = 0; i < L; i++){
+			suma += parseInt(String(num)[i]); //parseInt asecas  no funciona porq el numero no tiene length
 		}
-		*/
 
-		if(suma.length > 1){
-			num = suma;
-			return suma;
+		if(suma > 9){
+			num = suma
 		}
-		alert(suma)
 	}
-
+	document.getElementById("aqui").innerHTML = "El resultado de la compresión es: " + suma;
 	
 }
