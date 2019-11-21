@@ -14,3 +14,4 @@ function comprime(num){
 	document.getElementById("aqui").innerHTML = "El resultado de la compresión es: " + suma;
 	
 }
+
