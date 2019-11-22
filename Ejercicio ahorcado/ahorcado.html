@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ahorcado</title>
+	
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	
+
+
+</head>
+<body>
+	<div>
+		<span id="l"></span>
+	</div>
+	<picture id="imagenes">
+		<img src="ahorcado_6.png" alt="" id="image6">
+		<img src="ahorcado_5.png" alt="" id="image5">
+		<img src="ahorcado_4.png" alt="" id="image4">
+		<img src="ahorcado_3.png" alt="" id="image3">
+		<img src="ahorcado_2.png" alt="" id="image2">
+		<img src="ahorcado_1.png" alt="" id="image1">
+		<img src="ahorcado_0.png" alt="" id="image0">
+	</picture>
+	<form action="">
+		<h3>Introduce letra</h3>
+		<br>
+		<input type="text" name="letra" id="letra" maxlength="1">
+		<input type="button" name="enviar" maxlength="1" value="comprobar" onclick="enviar_palabra(letra.value)"> 
+	</form>
+
+
+
+
+
+
+
+
+<!--Poner al final para evitar error en el getelement-->
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
