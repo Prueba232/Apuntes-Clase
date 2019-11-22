@@ -77,6 +77,8 @@ function letra(letra){
 
 		//Si es repe
 		else{
+			//Vemos si el indice es el mismo empezando por el inicio que por el final para poder poner las duplicadas
+			//Esto no funciona para palabras como paralelepipedo
 			completar[num_a_sacar] = letra;
 			completar[num_reves ] = letra;
 			document.getElementById('salida').innerHTML = completar.join(' ')
