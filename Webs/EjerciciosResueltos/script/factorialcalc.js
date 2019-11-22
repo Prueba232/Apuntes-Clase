@@ -7,9 +7,9 @@ function factorial (numero) {
 	else{
 		for (i=1; i<=numero; i++) {
 		total = total * i; //Va guardando los valores porque total vale lo del resultado de la operacion
-		document.getElementById("salida").innerHTML = "El resultado es: " + total;
+		document.getElementById("salida").innerHTML = "El resultado de " + numero + "! es: " + total;
 	}
-	//return total; no es necesario
+	return total;
 }
 
 }
