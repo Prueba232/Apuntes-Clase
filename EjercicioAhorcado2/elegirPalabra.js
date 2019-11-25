@@ -56,10 +56,12 @@ function letra(letra){
 		contF = contF + 1;
 		var desap = contF -1; //Valor para que la imagen desaparezca y se sustituya
 		console.log(contF + " fallos");
-		//Creamos el contador de fallos 
+
+		//Sucesión de imágenes
 		imagenes[desap].style.display = "none";
 		imagenes[contF].style.display = "block";
-		if(img6.style.display == "block"){
+
+		if(img6.style.display == "block"){ //Imagen final visible?? Si:
 			document.getElementById('salida').innerHTML = "HAS PERDIDO <br> " + resolver;	
 			//Impedimos seguir jugando
 			document.getElementById('enviar').style.display = "none";
