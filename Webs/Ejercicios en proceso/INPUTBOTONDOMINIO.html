@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio Input Boton Dominio</title>
+	<style type="text/css">
+		body{
+			background-color: rgb(138, 206, 165); 
+		}
+
+		h1{
+			color: darkblue;
+		}
+
+		p{
+			color: red;
+		}
+
+		table{
+			border: 2px solid black;
+			float: right;
+			margin: 10px;
+			box-shadow: 2px 1px 2px orange; 
+			width: 40px;
+			height: 15px;
+		}
+		td{
+			border: 4px solid white;
+			font-size: 20px;
+			color: purple;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body onload="fecha()">
+
+	<!-- Muestra del reloj en pantalla -->
+	<table>
+		<tr>
+			<td id="dia">d</td>
+			<td id="mes">m</td>
+			<td id="año">a</td>
+		</tr>
+		<tr>
+			<td id="hora">h</td>
+			<td style="border: 0px; font-weight: 900">:</td>
+			<td id="min">min</td>
+		</tr>
+	</table>
+
+
+	<form>
+		<h1>Introduce tu correo</h1>
+		<input type="text" name="correo" id="correo">
+		<input type="button" name="enviar" value="comprobar" onclick="separar(correo.value);">
+	</form>
+	<p id="nombre">Nombre:</p>
+	<p id="dominio">Dominio:</p>
+	<hr>
+	<form>
+		<h2>Introduce dos fechas</h2>
+		<input type="text" name="f1" id="f1" placeholder="01/01/2000"><br><br>
+		<input type="text" name="f2" id="f2" placeholder="02/02/2000"><br><br>
+		<input type="button" name="calcular" value="calcular" onclick="calculo_tiempo(f1.value, f2.value);">
+	</form>
+
+
+
+
+
+	<script type="text/javascript" src="script/codigojsav1.js"></script>
+</body>
+</html>
