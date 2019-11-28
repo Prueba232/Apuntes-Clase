@@ -34,6 +34,7 @@ function separar(correo){
 function fecha(){
 	//meses para sacar el correcto
 	var meses = ["EN", "FEB", "MAR", "AB", "MAY", "JUN", "JUL", "AG", "SEP", "OCT", "NOV", "DIC"];
+
 	//Obtenemos la fecha y vamos sacando los atributos
 	var d = new Date();
 
@@ -54,15 +55,28 @@ function fecha(){
 	var min = d.getMinutes();
 	document.getElementById('min').innerHTML = min;
 
+	var sec = d.getSeconds();
+	if(sec < 10){
+		sec = "0"+sec; //El 0 sirve para que no se muestren los segundos menores de diez suelots
+	}
+	document.getElementById('sec').innerHTML = sec;
 
 }
 
+//Repeticion por sec para mostrar los segundos
+var rep = setInterval(fecha, 1000);
 
+//Diferencia entre fechas
 function calculo_tiempo(f1, f2){
 
+	//Sacamos las fechas introducidas en milisegundos y calculamos
 	var fecha1 = new Date(f1).getTime();
-	console.log(fecha1);
+	//console.log(fecha1);
 
 	var fecha2 = new Date(f2).getTime();
-	console.log(fecha2)
+	//console.log(fecha2)
+
+	var tiempo = new Date();
+	var tiempo = fecha1 - fecha2;
+	alert(Date(tiempo).toString());
 }
