@@ -14,10 +14,10 @@ console.log("Tienes que pagar " + cuota + " en " + n + " años con " + cuota_por
 
 for(i = 0; i < cuota; i++){
 	var tabla = document.createElement('table');
-	var tr = document.createElement('tr');
+	var fila = document.createElement('tr');
 
 }
 
-document.getElementById('salida').innerHTML = tabla;
+
 
 //Crear tablas segun cuotas en un for con document.createElement('table');

@@ -45,7 +45,7 @@ function letra(letra){
 		imagenes[desap].style.display = "none";
 		imagenes[contF].style.display = "block";
 		if(img6.style.display == "block"){
-			document.getElementById('salida').innerHTML = "HAS PERDIDO"
+			document.getElementById('salida').innerHTML = "HAS PERDIDO" + " " + resolver
 			//Impedimos seguir jugando
 			document.getElementById('enviar').style.display = "none"
 			document.getElementById('entrada').style.display = "none"
@@ -92,6 +92,7 @@ function letra(letra){
 		document.getElementById('enviar').style.display = "none"
 		document.getElementById('entrada').style.display = "none"
 		document.getElementById('body').style.background = "rgb(220, 198, 15)"; //Color dorado al ganar
+		document.getElementById('salida').innerHTML = "Has ganado" + " " + resolver;
 	}
 }
 

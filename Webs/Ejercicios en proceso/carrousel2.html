@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style>
+	#container {
+		margin:100px auto;
+		padding:10px;
+		width:800px;
+		border:1px solid #ccc;
+		}
+	#slider {
+		display:block;
+		width:100%;
+		height:600px;
+		padding:0;
+		margin:0 0 10px;
+		overflow:hidden;
+		}    
+	#prev, #next {
+		bottom:0;
+		display:block;
+		width:120px;
+		background-color:#00ABFF;
+		padding:5px;
+		border:none;
+		font-size:17px;
+		color:#fff;
+		}
+	#prev {
+		float:left;
+		}
+	#next {
+		float:right;
+		}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script/car.js"></script>
+
+</head>
+
+<body>
+
+<div id="container">
+    <ul id="slider">
+        <li id="1" class="slide selected" ><img src="imagen1.jpg" /></li>
+        <li id="2" class="slide"><img src="imagen2.jpg"/></li>
+        <li id="3" class="slide"><img src="imagen3.jpg"/></li>
+        <li id="4" class="slide"><img src="imagen4.jpg"/></li>
+    </ul>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+    <div style="clear:both"></div>
+</div>
+
+</body>
+</html>
