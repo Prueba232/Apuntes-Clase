@@ -1,0 +1,118 @@
+.perfil{
+		background-color: rgb(200, 122, 29);
+		height: 657px;
+		width: 20%;
+		position: fixed;
+		/*border: 1px solid red;*/
+	}
+
+	.morioh{
+		width: 180px;
+		height: 180px;
+		border: 8px solid rgb(229, 97, 21);
+		border-radius: 200px;
+		margin-top: 120px;
+		margin-left: 50px;
+		margin-bottom: 20px;
+
+
+	}
+
+
+	a{
+		color: rgba(206, 209, 209, 90%);
+		text-decoration: capitalize;
+		font-family: arial;
+		font-size: 18px;
+		font-weight: 800;
+		text-align: center;
+		
+	}
+
+	a:hover{
+		text-decoration: none;
+		color: white;
+
+	}
+
+	.About{
+		border: 0.5px solid white;
+		width: 80%;
+		height: 650px;
+		margin-left: 270px;
+
+
+	}
+
+	.telefono{
+		font-size: 30px;
+		color: rgb(157, 150, 146);
+	}
+
+	.correo{
+		font-family: verdana;
+		color: rgb(169, 70, 14);
+		font-size: 20px;
+		margin-left: 5px;
+	}
+
+	.correo:hover{
+		color: rgba(169, 70, 14, 70%);
+	}
+
+	.textoAbout{
+		font-family: comic sans;
+		font-size: 25px;
+		color: rgb(132, 124, 120);
+		float: left;
+	}
+
+	.redesSociales{
+		border: 1px solid black;
+		width: 70px;
+		height: 70px;
+		border-radius: 200px;
+		margin-top: 10px;
+		margin-left: 40px
+	}
+
+	.redes:hover{
+		opacity: 75%;
+	}
+
+	.experience{
+		border: 0.5px solid white;
+		width: 80%;
+		height: 650px;
+		margin-left: 270px;
+	}
+
+	.titularesExperiencias{
+		color: black;
+		font-family: arial;
+		font-weight: 600;
+		font-size: 20px
+
+	}
+
+	h5{
+		font-size: 35px;
+		font-weight: 700;
+		margin-top: 50px;
+	}
+
+	.estudio{
+		font-size: 16px;
+		font-weight: 700;
+		color: gray;
+		font-family: Tahoma;
+	}
+
+	.lengu{
+		width: 80px;
+		height: 75px;
+	}
+
+	.logos:hover{
+		opacity: 50%
+	}

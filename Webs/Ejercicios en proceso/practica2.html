@@ -1,0 +1,114 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+    <style>
+        <title>Documento sin título</title><style>div {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Demo AJAX</h1>
+    <input id="registro" type="number" placeholder="id" />
+    <button onclick="mandaAjax()">Enviar</button>
+    <div id="rta"></div>
+    <div id="profile">
+        <table>
+            <tr>
+                <td rowspan="4"><img src="" style="width:100px" id="foto" /></td>
+                <td>Nombre: </td>
+                <td id="nombre">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Apellidos: </td>
+                <td id="apellidos">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Teléfono: </td>
+                <td id="telefono">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>email: </td>
+                <td id="email">&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="descripcion" colspan="3">&nbsp;</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script>
+        function mandaAjax() {
+            $('#rta').html('');
+            $.ajax({
+                type: "POST",
+                url: "busca_alumnos.php",
+                data: "id=" + $('#registro').val(),
+                success:
+                    function (data, status) {
+                        console.log("External content loaded successfully!");
+                        // convierte la respuesta en un array
+                        var rta = data.split(';');
+                        var tabla = '<table id="miTabla">';
+                        tabla += '<thead><tr><th>Nombre</th><th>Apellidos</th><th>Teléfono</th><th>email</th></tr></thead>';
+
+                        // convierte cada elemento JSON en un objeto y lo añade a la tabla
+                        for (var i = 0; i < rta.length; i++) {
+                            a = JSON.parse(rta[i]);
+                            tabla += '<tr id="' + a.id + '"><td>' + a.nombre + '</td><td>' + a.apellidos + '</td><td>' + a.telefono + '</td><td>' + a.email + '</td></tr>';
+                        }
+                        tabla += '</table>';
+
+                        // muestra la tabla en el div "procesado"
+                        $('#rta').html(tabla);
+
+                        // al hacer click en una fila aparece un mesaje resumen con todos los datos del alumno
+                        $("tbody tr").off('click').on('click', function () {
+                            //alert(this.id);
+                            busca_alumno(this.id);
+
+                            //alert("Nombre: " + $(this).children().eq(0).html() + " " +$(this).children().eq(1).html() + "\n Teléfono: " +  $(this).children().eq(2).html() + "\n email: " + $(this).children().eq(3).html());					
+                        });
+
+                        // aplica formato dataTable	
+                        $('#miTabla').DataTable({
+                            "order": [[2, "asc"]]
+                        });
+                        
+                        $("#foto").attr('src', '../img/' + a.foto);
+                        $("#nombre").html(a.nombre);
+                        $("#apellidos").html(a.apellidos);
+                        $("#telefono").html(a.telefono);
+                        $("#email").html(a.email);
+                        $("#descripcion").html(a.descripcion);
+                        function busca_alumno(id){
+                            alert("busco el alumno: " + id);
+                        }
+
+                    },
+                error:
+                    function (err) {
+                        console.log("error " + err.status + ' ' + err.statusText);
+                    }
+            });
+        };
+		
+		
+
+	
+    </script>
+</body>
+
+</html>

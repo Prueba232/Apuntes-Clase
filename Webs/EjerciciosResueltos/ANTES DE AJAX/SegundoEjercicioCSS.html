@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Segundo ejercicio css</title>
+	<style type="text/css">
+
+		.img1{
+			
+			border: 10px solid rgba(219, 224, 216, 40%);
+			width: 400px;
+			height: 239px;
+			float: left;
+			margin-right: 10px;
+			box-shadow: 0px 0px 2px 1px black;
+
+			
+		}
+		.img2{
+			
+			border: 1px solid white;
+			border-radius: 10px;
+			width: 400px;
+			height: 239px;
+			float: right;
+			margin-right: 10px;
+			
+		}
+		.img3{
+			
+			border-radius: 10px;
+			width: 300px;
+			height: 600px;
+			float: right;
+			margin-right: 20px;
+			margin-left: 20px;
+			
+		}
+
+		img:hover {
+			opacity: 0.8;
+		}
+
+		p{
+			font-family: comic sans;
+			font-size: 20px;
+			color: orange;
+			font-weight: 900;
+			text-shadow: 1px 1px black;
+	
+
+		}
+		body{
+			background-color: gray;
+		}
+
+		h1{
+			font-family: arial;
+			font-size: 20px;
+			text-shadow: 1px 1px brown;
+
+		}
+		header{
+			font-size: 35px;
+			text-align: center;
+			font-family: papyrus;
+			font-weight: 900;
+			text-shadow: 2px 2px cyan;
+		}
+
+		article{
+			margin: auto;
+			width: 50%;
+
+
+		}
+		.div{
+			text-align: left;
+			margin: auto;
+			/*border: 1px solid;*/
+			border-width: 10px;
+			
+		}
+		.publicidad{
+			margin: auto;
+			width: 25%;
+			height: 800px;
+			/*border: 1px solid;*/
+			float: left;
+			padding-right: 10px;
+			background-image: linear-gradient(to right, black, gray);
+		}
+
+		.publicidad2{
+			margin: auto;
+			margin-right: 10px;
+			padding-left: 10px;
+			width: 25%;
+			height: 800px;
+			/*border: 1px solid;*/
+			float: right;
+			background-image: linear-gradient(to right, gray, black);
+		}
+
+		nav{
+			margin: auto;
+			text-align: center;
+			/*border: 2px solid;*/
+			background-color: white;
+			background-image: linear-gradient(to right, black, gray, black);
+			border-radius: 20px 2px 1px;
+			margin-right: 10px;
+		}
+
+		a{
+			color: black;
+			text-shadow: 1px 0px brown;
+		}
+
+		a:hover{
+			color: red;
+
+		}
+
+		footer{
+			text-align: right;
+		}
+
+		.textoSobreImagen{
+	
+			position: absolute;
+			text-align: center;
+			font-family: arial;
+			color: green;
+			font-size: 18px;
+			text-shadow: 3px 1px yellow;
+			font-weight: 500;
+			padding-left: 125px;
+			padding-top: 25px;
+
+		}
+		.textoSobreImagenL{
+	
+			position: absolute;
+			text-align: center;
+			font-family: arial;
+			color: pink;
+			font-size: 20px;
+			text-shadow: 1px 1px magenta;
+			font-weight: 900;
+			left: 27%;
+		}
+		.textoSobreImagenR{
+	
+			position: absolute;
+			text-align: center;
+			font-family: arial;
+			color: pink;
+			font-size: 20px;
+			text-shadow: 1px 1px magenta;
+			font-weight: 900;
+			left: 54.5%;
+
+
+		}
+
+		.textoSobreImagenLD{
+	
+			position: absolute;
+			text-align: center;
+			font-family: arial;
+			color: pink;
+			font-size: 20px;
+			text-shadow: 1px 1px magenta;
+			font-weight: 900;
+			left: 27%;
+			bottom: 46%;
+		}
+
+		.textoSobreImagenRD{
+	
+			position: absolute;
+			text-align: center;
+			font-family: arial;
+			color: pink;
+			font-size: 20px;
+			text-shadow: 1px 1px magenta;
+			font-weight: 900;
+			left: 54.5%;
+			bottom: 46%;
+
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		📰 Boletin de noticias mañaneras. 📰
+	</header>
+	<div>
+		<nav>
+			<a href="https://www.youtube.com/?hl=es&gl=ES" target="pag1"> YouTube</a> &nbsp <strong>|</strong>  <a href ="https://circleci.com/integrations/github/?utm_source=gnb&utm_medium=SEM&utm_campaign=SEM-gnb-Github-Eng-ni&utm_content=SEM-gnb-Github-Eng-ni-Github&gclid=EAIaIQobChMIluXNudW05QIViZ3VCh2q9wJsEAAYASAAEgJrM_D_BwE" target="pag2">GitHub</a> &nbsp <strong>|</strong>  &nbsp<a href="https://www.w3schools.com/" target="pag3">W3Schools</a>
+		</nav>
+	</div>
+
+	<div class="publicidad">
+		<h1 style="text-align: center; color: pink">&bull;&nbsp<u>Anuncio</u></h1>
+		<marquee direction = "left" scrollamount = "10"><img src="img/click.jpg" class="img3" alt="Anuncio"></marquee>
+	</div>
+
+	<div class="publicidad2">
+		<h1 style="text-align: center; color: pink">&bull;&nbsp<u> Publicidad</u></h1>
+		<marquee direction = "right" scrollamount = "10"><img src="img/nintendopublicidad.jpg" class="img3" alt="nintendo"></marquee>
+	</div>
+	<!--Aqui empieza el articulo-->
+	<article>
+		<div class="div">
+			<img src="img/morioh.jpg" align="center" class="img1" class="imgBox" alt="morioh">
+			<h2 class="textoSobreImagen">Bienvenido a casa</h2>
+			<h2 class="textoSobreImagenL">J</h2>
+			<h2 class="textoSobreImagenR">O</h2>
+			<h2 class="textoSobreImagenLD">J</h2>
+			<h2 class="textoSobreImagenRD">O</h2>
+			<h1>&bull; Morioh</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<br>
+			<br>
+		</article>
+		<!--Repetimos estructura pero con cambios-->
+		<article>
+		<div class="div">
+			<img src="img/morioh.jpg" align="center" class="img2" alt="morioh">
+			<h1>&bull; Otra vez Morioh</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+			</p>	
+		</article>
+	</div>
+</body>
+</html>

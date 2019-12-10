@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>CuartoEjercicio</title>
+</head>
+<body>
+	<div id="datos" style="padding: 10px; border: 1px solid; width: 20%; margin: auto; border-radius: 5px">
+		<form method="post">
+			<p>Title</p>
+			<p>
+				<input type="radio" name="mr" value="Mr" multiple="no">Mr
+				<input type="radio" name="mr" value="Mrs" multiple="no">Mrs
+				<input type="radio" name="mr" multiple="no" value="miss">Miss
+			</p>
+			<p>First Name</p>
+			<input type="text" name="nombre">
+			<p>Last name</p>
+			<input type="text" name="last name">
+			<p>Email</p>
+			<input type="Email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required placeholder="ejemplo@gmail.com">
+			<p>Phone number</p>
+			<input type="tel" name="telphone"  pattern="[0-9]{9}"  title="Nine digits code" required placeholder=" 123 45 67 89" />
+			<p>password</p>
+			<input type="text" name="password">
+			<p>Country</p>
+			<select name="country">
+				<option value="China">China</option>
+				<option value="España">España</option>
+				<option value="Francia">Francia</option>
+			</select>
+			<br>
+			<input type="checkbox" name=""> I agree to the <a href="">terms and conditions</a>
+			<br>
+			<p>
+				<input type="submit" name="enviar" value="Sign up">
+				<input type="reset" name="reset" value="Reset form">
+			</p>
+		</form>
+	</div>
+</body>
+</html>

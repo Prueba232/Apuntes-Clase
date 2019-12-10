@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script/gal.js"></script>
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+
+        .miniatura {
+            border-radius: 10px;
+        }
+
+        .miniatura:hover {
+            cursor: pointer;
+            box-shadow: 5px 10px 8px #888888;
+        }
+
+        .mimodal {
+            width: 800px;
+            background-color: cyan;
+        }
+
+
+        /* BASIC */
+
+        html {
+            background-color: #56baed;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            height: 100vh;
+        }
+
+        a {
+            color: #92badd;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: inline-block;
+            margin: 40px 8px 10px 8px;
+            color: #cccccc;
+        }
+
+
+
+        /* STRUCTURE */
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            min-height: 100%;
+            padding: 20px;
+        }
+
+        #formContent {
+            -webkit-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+            background: #fff;
+            padding: 30px;
+            width: 90%;
+            max-width: 450px;
+            position: relative;
+            padding: 0px;
+            -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        #formFooter {
+            background-color: #f6f6f6;
+            border-top: 1px solid #dce8f1;
+            padding: 25px;
+            text-align: center;
+            -webkit-border-radius: 0 0 10px 10px;
+            border-radius: 0 0 10px 10px;
+        }
+
+
+
+
+
+
+
+        /* FORM TYPOGRAPHY*/
+
+        input[type=button],
+        input[type=submit],
+        input[type=reset] {
+            background-color: #56baed;
+            border: none;
+            color: white;
+            padding: 15px 80px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 13px;
+            -webkit-box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+            box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+            -webkit-border-radius: 5px 5px 5px 5px;
+            border-radius: 5px 5px 5px 5px;
+            margin: 5px 20px 40px 20px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input[type=button]:hover,
+        input[type=submit]:hover,
+        input[type=reset]:hover {
+            background-color: #39ace7;
+        }
+
+        input[type=button]:active,
+        input[type=submit]:active,
+        input[type=reset]:active {
+            -moz-transform: scale(0.95);
+            -webkit-transform: scale(0.95);
+            -o-transform: scale(0.95);
+            -ms-transform: scale(0.95);
+            transform: scale(0.95);
+        }
+
+        input[type=text] {
+            background-color: #f6f6f6;
+            border: none;
+            color: #0d0d0d;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px;
+            width: 85%;
+            border: 2px solid #f6f6f6;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            -webkit-border-radius: 5px 5px 5px 5px;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        input[type=text]:focus {
+            background-color: #fff;
+            border-bottom: 2px solid #5fbae9;
+        }
+
+        input[type=text]:placeholder {
+            color: #cccccc;
+        }
+        #icon {
+            width: 50%;
+            margin: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Portfolio</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="login_modal"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1>My Portfolio</h1>
+            <p>Some text that represents "Me"...</p>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-3 text-center">
+        <h3>Some of my Work</h3><br>
+        <div class="row">
+            <div class="col-sm-3">
+                <p>Some text..</p>
+                <img src="imagen1.jpg" class="img-responsive miniatura" style="width:100%" alt="Image" id="a">
+            </div>
+            <div class="col-sm-3">
+                <p>Some text..</p>
+                <img src="imagen2.jpg" class="img-responsive miniatura" style="width:100%" alt="Image" id="b">
+            </div>
+            <div class="col-sm-3">
+                <p>Some text..</p>
+                <img src="imagen3.jpg" class="img-responsive miniatura" style="width:100%" alt="Image" id="c">
+            </div>
+            <div class="col-sm-3">
+                <p>Some text..</p>
+                <img src="imagen4.jpg" class="img-responsive miniatura" style="width:100%" alt="Image" id="d">
+            </div>
+        </div>
+    </div><br>
+
+    <div class="container-fluid bg-3 text-center">
+        <h3>La imagen seleccionada </h3><br>
+        <div class="row" id="salida">
+            <div id="seleccionada" class="col-sm-12">
+        </div>
+    </div>
+    </div><br>
+
+
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog mimodal">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Imagen seleccionada</h4>
+                    </div>
+                    <div id="imagen_modal" class="modal-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--LLAMADA AL MODAL-->
+    <div class="modal fade" id="myModalLogin">
+        <div class="modal-dialog">
+            <!--CONTENIDO-->
+            <div class="modal-content text-center">
+                <!--Login-->
+            </div>
+            <div class="modal-body">
+                <div class="wrapper fadeInDown">
+                    <div id="formContent">
+                        <!-- Tabs Titles -->
+
+                        <!-- Icon -->
+                        <div class="fadeIn first">
+                            <img src="imagen1.jpg" id="icon" alt="User Icon" />
+                        </div>
+
+                        <!-- Login Form -->
+                        <form>
+                            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+                            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+                            <input type="submit" class="fadeIn fourth" value="Log In">
+                        </form>
+                        <!-- Remind Passowrd -->
+                        <div id="formFooter">
+                            <a class="underlineHover" href="#">Forgot Password?</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <footer class="container-fluid text-center">
+        <p>Footer Text</p>
+    </footer>
+
+</body>
+
+</html>

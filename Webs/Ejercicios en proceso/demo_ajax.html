@@ -1,0 +1,92 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
+    <title>Documento sin título</title>
+    <style>
+        div {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Demo AJAX</h1>
+    <button onclick="mandaAjax()">Enviar</button>
+    <div id="rta"></div>
+
+    <div>
+        <table id="myTable"  style="padding: 2px; text-align: center; border: solid 2px orange">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Telefono</th>
+                    <th>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId"
+                                placeholder="">
+                            <small id="emailHelpId" class="form-text text-muted">Help text</small>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="procesado">
+                <tr>
+                    <td>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <script>
+        function mandaAjax() {
+            $('#rta').html('');
+            $('#rta').load("JSON2.txt", function (responseTxt, statusTxt, xhr) {
+                if (statusTxt == "success") {
+                    console.log("External content loaded successfully!");
+                    var data = $("#rta").html();
+                    var alumnos = data.split(";"); //Respuesta
+                    var lista = "";
+                    //Convertimos a objeto
+                    for (i = 0; i < alumnos.length; i++) {
+                        a = JSON.parse(alumnos[i]);
+                        lista += '<tr><td>' + a.nombre + '</td><td>' + a.apellidos + '</td><td>' + a.telefono + '</td><td>' + a.email + '</td></tr>';
+                    }
+                    //Mostramos en pantalla
+                    $("#procesado").html(lista);
+                    //Tras cargar todo llamamos a la funcion
+                    $(document).ready(function () {
+                        $('#myTable').DataTable();
+                        $("tbody tr").off('click').on('click', function () {
+                            // alert("Nombre: " + $(this).children().eq(0).html() + " " + $(this).children().eq(1).html() + "\n Teléfono: " + $(this).children().eq(2).html() + "\n email: " + $(this).children().eq(3).html()); 
+                            $("#form_modal").click(function () {
+                                $("#myModal").modal();
+                            });
+                        });
+                    });
+                };
+
+                if (statusTxt == "error")
+                    console.log("Error: " + xhr.status + ": " + xhr.statusText);
+            });
+        }
+    </script>
+</body>
+
+</html>

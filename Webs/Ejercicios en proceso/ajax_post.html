@@ -1,0 +1,70 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+    <title>Documento sin título</title>
+    <style>
+        div {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Demo AJAX</h1>
+    <input id="registro" type="number" placeholder="id" />
+    <button onclick="mandaAjax()">Enviar</button>
+    <div id="rta"></div>
+    <div id="procesado"></div>
+    <div id="tabla"></div>
+
+
+    <script>
+        function mandaAjax() {
+            $('#rta').html('');
+            $.post("busca_alumnos.php",
+                { id: $('#registro').val() },
+                function (data, status) {
+                    console.log('Status: ' + status + ' datos: ' + data);
+
+                    // convierte la respuesta en un array
+                    var rta = data.split(';');//CAMBIO DEL NOMBRE DE LA VARIABLE ASI COMO DEL alumnos por data
+                    var tabla = '<table id="miTabla">';//OJO MIRAR PUTAS COMILLAS
+                    tabla += '<thead><tr><th>Nombre</th><th>Apellido</th><th>Telefono</th><th>Email</th></tr></thead>';//OJO MIRAR
+
+                    // convierte cada elemento JSON en un objeto
+                    for (var i = 0; i < rta.length; i++) {//mirar cambios con ejerciciofile.html
+                        a = JSON.parse(rta[i]);
+                        tabla += '<tr><td>' + a.nombre + '</td><td>' + a.apellidos + '</td><td>' + a.telefono + '</td><td>' + a.email + '</td></tr>';
+                    }
+                    tabla += '</table>';//CAMBIOS RESPECTO ejerciciofile.html
+                    console.log(tabla);
+                    $('#procesado').html(tabla);
+
+                    // al hacer click en una fila aparece un mesaje resumen con todos los datos del alumno
+                    $("tbody tr").off('click').on('click', function () {
+                        alert("Nombre: " + $(this).children().eq(0).html() + " " + $(this).children().eq(1).html() + "\n Teléfono: " + $(this).children().eq(2).html() + "\n email: " + $(this).children().eq(3).html());
+                    });
+
+                    // aplica formato dataTable
+                    $('#miTabla').DataTable({
+                        "order": [[2, "desc"]]
+                    });
+                }).fail(function (err) {//LAS FUNCIONES VAN ENCADENADAS
+                    console.log("error " + err.status + ' ' + err.statusText);
+                });
+        }
+
+    </script>
+</body>
+
+</html>
